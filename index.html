@@ -36,12 +36,12 @@
           <div class="col-lg-8 text-center">
             <!-- Imagem Ultrasecreto -->
             
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>$.get("https://ipinfo.io/json", function (response) {
-$("#ip").html("IP: " + response.ip);
-$("#address").html(response.city + ", em " + response.region);
-$("#details").html(JSON.stringify(response, null, 4));
-}, "jsonp");</script>
-<center>Você e algumas outras pessoas de <span id="address"></span> foram selecionados para participar deste programa.</center>
+            <span id="number"></span> pessoas estão assistindo a esse vídeo agora!
+
+<script>
+function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
+function generate(){number=Math.floor(Math.random()*1143)+1578;document.getElementById("number").innerHTML=number;add();}
+generate();</script>
 
             <!-- Headline -->
             <h5 class="my-4"><b>3 Etapas Finlandesas Permitem Memorizar Conteúdos Dormindo</b></h5>
@@ -56,9 +56,9 @@ $("#details").html(JSON.stringify(response, null, 4));
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
               </a>
             </div>
+            
             <p> </p>
-            <p> </p>
-            <span id="number"></span> pessoas estão assistindo a esse vídeo agora!
+            
 
             <!-- Termos de Uso e Política de Privacidade -->
             <div class="text-white mt-4"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
@@ -118,10 +118,7 @@ if (event.keyCode == 73) {return false;}
 
 <p> </p>
 
-<script>
-function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
-function generate(){number=Math.floor(Math.random()*1143)+1578;document.getElementById("number").innerHTML=number;add();}
-generate();</script>
+
 
        </div>
       </div>    
