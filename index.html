@@ -36,16 +36,15 @@
           <div class="col-lg-8 text-center">
             <!-- Imagem Ultrasecreto -->
             
-
-            <span id="number"></span> pessoas estão assistindo a esse vídeo agora!
-
-<script>
-function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
-function generate(){number=Math.floor(Math.random()*1143)+1578;document.getElementById("number").innerHTML=number;add();}
-generate();</script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>$.get("https://ipinfo.io/json", function (response) {
+$("#ip").html("IP: " + response.ip);
+$("#address").html(response.city + ", em " + response.region);
+$("#details").html(JSON.stringify(response, null, 4));
+}, "jsonp");</script>
+<center>Você e algumas outras pessoas de <span id="address"></span> foram selecionados para participar deste programa.</center>
 
             <!-- Headline -->
-            <h3 class="my-4"><b>3 Etapas Finlandesas Permitem Memorizar Conteúdos Dormindo</b></h3>
+            <h5 class="my-4"><b>3 Etapas Finlandesas Permitem Memorizar Conteúdos Dormindo</b></h5>
 
             <!-- VSL -->
             <script type="text/javascript" id="scr_62567554a95eb80009cf0ddb">var s=document.createElement("script");s.src="https://cdn.converteai.net/f28b2bcb-c5b5-4e7c-8e8f-eaa512b6a399/players/62567554a95eb80009cf0ddb/player.js",s.async=!0,document.head.appendChild(s);</script>
@@ -57,6 +56,9 @@ generate();</script>
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
               </a>
             </div>
+            <p> </p>
+            <p> </p>
+            <span id="number"></span> pessoas estão assistindo a esse vídeo agora!
 
             <!-- Termos de Uso e Política de Privacidade -->
             <div class="text-white mt-4"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
@@ -112,5 +114,20 @@ if (event.keyCode == 73) {return false;}
 }
 </script>
 
+
+
+<p> </p>
+
+<script>
+function add(){number+=Math.floor((Math.random()*6)+1);document.getElementById("number").innerHTML=number;setTimeout("add()",10000);}        
+function generate(){number=Math.floor(Math.random()*1143)+1578;document.getElementById("number").innerHTML=number;add();}
+generate();</script>
+
+       </div>
+      </div>    
+    </div>
+    <p style="text-align: center; opacity: 0.3; font-weight: lighter; ">© 2022 – Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
